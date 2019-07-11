@@ -1,0 +1,37 @@
+.address1 li, .address2 li{
+	height:24px;
+}
+.facil ul li.listtext{
+	padding:0 0 0 10px !important;
+}
+.facil ul li.listtext input{
+	border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+	background-color:#FFF;
+}
+.blog-8 p{
+	color:#767676;
+}
+.section8.sec_hours{ padding-bottom:40px !important;}
+.days{
+	float:left;
+}
+#barmatches .blog{display:none;}
+.nomore{
+	font-family: "LatoReg";
+	margin-top:20px;;
+}
+.sec_menu li {text-transform:uppercase;}
+.sec_menu ul li a {
+	color: #cdcdcd;
+	text-decoration:none;
+}
+.sec_menu ul li a:hover {
+	 color: #d5b524;
+}
+.sec_menu ul li a.active {
+	color: #d5b524;
+}

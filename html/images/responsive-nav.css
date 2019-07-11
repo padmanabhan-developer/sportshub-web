@@ -1,0 +1,52 @@
+/*! responsive-nav.js 1.0.25 by @viljamis */
+
+.nav-collapse ul {
+ 
+  list-style: none;
+}
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-collapse.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color:#333; text-decoration:none; background:url(images/list-icon.png) no-repeat center center #d5b524; padding:0 0 0 0; position:absolute; top:0; line-height:40px; right:0; -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+width:40px;
+text-align:center; text-indent:-999em; z-index:9999;
+}
+
+
+
+@media screen and (min-width:768px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

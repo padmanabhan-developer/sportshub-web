@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'FjallaOneRegular';
+    src: url('../fonts/FjallaOneRegular.eot');
+    src: url('../fonts/FjallaOneRegular.eot') format('embedded-opentype'),
+         url('../fonts/FjallaOneRegular.woff2') format('woff2'),
+         url('../fonts/FjallaOneRegular.woff') format('woff'),
+         url('../fonts/FjallaOneRegular.ttf') format('truetype'),
+         url('../fonts/FjallaOneRegular.svg#FjallaOneRegular') format('svg');
+}
+@font-face {
+    font-family: 'LatoReg';
+    src: url('../fonts/LatoReg.eot');
+    src: url('../fonts/LatoReg.eot') format('embedded-opentype'),
+         url('../fonts/LatoReg.woff2') format('woff2'),
+         url('../fonts/LatoReg.woff') format('woff'),
+         url('../fonts/LatoReg.ttf') format('truetype'),
+         url('../fonts/LatoReg.svg#LatoReg') format('svg');
+}
+@font-face {
+    font-family: 'LatoBol';
+    src: url('../fonts/LatoBol.eot');
+    src: url('../fonts/LatoBol.eot') format('embedded-opentype'),
+         url('../fonts/LatoBol.woff2') format('woff2'),
+         url('../fonts/LatoBol.woff') format('woff'),
+         url('../fonts/LatoBol.ttf') format('truetype'),
+         url('../fonts/LatoBol.svg#LatoBol') format('svg'),
+         url('../fonts/Lato-BoldItalic.ttf#LatoBol') format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/LatoBoldItalic.ttf#Lato') format('truetype');
+}
+@font-face {
+    font-family: 'LatoBla';
+    src: url('../fonts/LatoBla.eot');
+    src: url('../fonts/LatoBla.eot') format('embedded-opentype'),
+         url('../fonts/LatoBla.woff2') format('woff2'),
+         url('../fonts/LatoBla.woff') format('woff'),
+         url('../fonts/LatoBla.ttf') format('truetype'),
+         url('../fonts/LatoBla.svg#LatoBla') format('svg');
+}
+
+h2{font-family: 'FjallaOneRegular';}
+body{background:#182847;}
+
+p,h1,h2,h3,h4,h5,h6{margin:0; padding:0; font-weight:normal;}
+
+
+#banner{float:left; width:100%; background:url(../images/banner.jpg) no-repeat 60% center; background-size:cover; padding:116px 0 285px 0; }
+.banner-text{float:left; width:530px; text-align:center;}
+.logo{float:left; width:100%; text-align:center; margin:0 0 29px 0;} 
+.banner-button{display:inline-block;
+  width: 308px;
+  background: #1b80de;
+  height: 37px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin:0; line-height:37px; color:#fff !important; 
+  font-size: 13px;
+  font-family: 'LatoBol';
+  border: none;
+  text-transform: uppercase;text-decoration:none  !important;}
+.banner-button:hover{
+  color:#fff  !important; 
+text-decoration:none  !important;}
+.banner-text h2{font-size:48px; line-height:54px; color:#fff;font-family: 'FjallaOneRegular'; text-transform:uppercase; padding:0 0 13px 0;}
+.banner-text h3{color:#fff; font-size:18px;font-family: 'LatoReg'; line-height:24px; padding:0 0 31px 0;}
+
+#content{width:100%; float:left; padding:0 0;}
+.container{width:1060px !important; margin:auto; padding:0 !important;}
+.inner{width:100%; text-align:center;}
+.signup_box{display:inline-block; width:312px;}
+.signup_box h2{color:#fff; font-size:27px; text-transform:uppercase; padding:0 0 25px 0;}
+.form_box{float:left; width:100%; background:#b1d1f0; height:37px;-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px; margin:0 0 22px 0;}
+.signup-button{float:left; width:100%; background:#1b80de; height:42px;-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;margin:0 0 22px 0; cursor:pointer; text-align:center; padding:0; color:#fff; font-size:13px;font-family: 'LatoBol'; border:none; text-transform:uppercase; }
+.mail-input{background:url(../images/mail.png) no-repeat 12px 11px; border:none  !important;outline: none !important; height:37px; padding:0 45px; margin:0; width:100%; color:#1f1f1f; font-size:13px;font-family: 'LatoBol'; }
+.address{background:url(../images/address-icon.png) no-repeat 12px 11px; border:none  !important;outline: none !important; height:37px; padding:0 45px; margin:0; width:100%; color:#1f1f1f; font-size:13px;font-family: 'LatoBol'; }
+.home-input{background:url(../images/home.png) no-repeat 12px 11px; border:none  !important;outline: none !important; height:37px; padding:0 45px; margin:0; width:100%; color:#1f1f1f; font-size:13px;font-family: 'LatoBol'; }
+.password-input{background:url(../images/password.png) no-repeat 12px 9px; border:none !important;outline: none !important; height:37px; padding:0 45px; margin:0; width:100%; color:#1f1f1f; font-size:13px;font-family: 'LatoBol';}
+.signup_box h6{color:#72809c; font-size:12px;font-family: 'LatoReg'; margin:0 0 22px 0; clear:both;}
+.signup_box h6 a{color:#fff; text-decoration:none;}
+.inner h1{font-size:48px; text-transform:uppercase; color:#fff;font-family: 'FjallaOneRegular'; padding:0 0 33px 0;}
+.inner h5{font-size:18px; color:#fff;font-family: 'LatoReg'; line-height:30px; padding:0 0 48px 0;}
+.logo2{float:left;}
+.row1{    float: left;
+    margin: 0 0 180px;
+    padding: 25px 0 40px;
+    width: 100%;}
+.contact_us{float:right; text-decoration:none; color:#fff; font-size:18px; text-transform:uppercase;font-family: 'FjallaOneRegular'; line-height:68px;}
+.contact_us:hover{text-decoration:none; color:#fff;}
+.single-page-nav ul{margin:0 !important; padding:0 !important;}
+textarea:focus, input:focus{
+    outline:0 !important; border:none !important;
+}
+
+.row2{float:left; width:100%; background:#151515; margin:0; padding:50px 0 0 0;}
+
+
+
+.full-width{float:left; width:100%; margin:60px 0 0 0 ; clear:both; }
+.left{text-align:left;}
+.left h2{color:#fff;  font-family: 'FjallaOneRegular'; font-size:48px; text-transform:uppercase; padding:0 0 30px 0; margin:0;}
+.left p{color:#fff; font-size:14px; line-height:24px;font-family: 'LatoReg'; padding:0 0 20px 0;}
+.right img{max-width:100%; height:auto;}
+.error {  color:#e60000;  font-family: 'FjallaOneRegular'; margin-top:-3px; margin-bottom:0px; padding:5px;font-size:14px;}
+
+.subscriptions{float:left; width:100%; background:#fff; border:solid 1px #d4d5d9;-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px; overflow:hidden;}
+.title{background:#1b80de; color:#fff; line-height:42px; font-size:14px; text-transform:uppercase; padding:0 0 0 15px; border-bottom:solid 1px #d7d8dc;}
+.subscriptions-inner{float:left; width:100%;}
+.table1 th{padding:0 0 0 20px; color:#1f1f1f; font-size:11px; text-transform:uppercase; text-align:left; vertical-align:middle;font-family: 'LatoReg'; line-height:40px;}
+.table1 td{padding:19px 0 19px 20px; color:#1f1f1f; font-size:13px; text-transform:uppercase; text-align:left; vertical-align:middle;font-family: 'LatoBol'; line-height:20px; border-top:solid 1px #d4d5d9;}
+.table1 td:nth-child(3){text-transform:lowercase;}
+.table1 td:last-child,.table1 th:last-child{text-align:center;}
+.about_bold{font-size:14px !important;font-family: 'LatoBol' !important;}
+.about_regular{font-size:14px !important;font-family: 'LatoReg' !important;}
+.about_bold_italic{font-size:15px !important;font-weight:bold !important; font-style: italic!important;font-family: 'LatoBoldItalic' !important;}
+/*********** RESPONSIVE ******************/
+
+
+
+@media all and (min-width:768px) and (max-width:1100px){
+.container {
+  width: 960px !important;
+  margin: auto;
+  padding: 0 !important;
+}
+#banner {
+  float: left;
+  width: 100%;
+  background: url(../images/banner.jpg) no-repeat 40% center;
+  background-size: cover;
+  padding: 116px 0 285px 0;
+}
+}
+
+@media all and (min-width:768px) and (max-width:979px){
+.container {
+  width:100% !important;
+  margin: auto;
+  padding:0 20px !important;
+}
+#banner {
+  float: left;
+  width: 100%;
+  background: url(../images/banner.jpg) no-repeat 40% center;
+  background-size: cover;
+  padding: 116px 0 285px 0;
+}
+}
+
+
+@media all and (min-width:480px) and (max-width:767px){
+.container {
+  width:100% !important;
+  margin: auto;
+  padding:0 20px !important;
+}
+.banner-text {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+#banner {
+  float: left;
+  width: 100%;
+  background: url(../images/banner.jpg) no-repeat 40% center;
+  background-size: cover;
+  padding: 116px 0 285px 0;
+}
+}
+
+
+@media all and (min-width:320px) and (max-width:479px){
+.container {
+  width:100% !important;
+  margin: auto;
+  padding:0 10px !important;
+}
+.banner-text {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.signup_box {
+  display: inline-block;
+  width: 100%;
+}
+.banner-button {
+  display: inline-block;
+  width: 100%;
+  background: #1b80de;
+  height: 37px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin: 0;
+  line-height: 37px;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'LatoBol';
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo2 {
+  float: left;
+  width: 100%;
+}
+.contact_us {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'FjallaOneRegular';
+  line-height: 68px;
+  width: 100%;
+}
+.row1 {
+  float: left;
+  width: 100%;
+  margin:0; 
+}
+.banner-text h2 {
+  font-size: 25px;
+  line-height: 40px;
+  color: #fff;
+  font-family: 'FjallaOneRegular';
+  text-transform: uppercase;
+  padding: 0 0 13px 0;
+}
+.inner h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'FjallaOneRegular';
+  padding: 0 0 33px 0;
+}
+#banner {
+  float: left;
+  width: 100%;
+  background: url(../images/banner.jpg) no-repeat 20% center;
+  background-size: cover;
+  padding: 116px 0 285px 0;
+}
+.left h2 {
+  color: #fff;
+  font-family: 'FjallaOneRegular';
+  font-size: 34px;
+  text-transform: uppercase;
+  padding: 0 0 30px 0;
+  margin: 0;
+}
+}
+
