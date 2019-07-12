@@ -345,7 +345,6 @@ public function AdminLoginFormAttribute($values=array())
   {
 
     if(!empty($email) and !empty($password)){
-
       // checking email id not empty
         $q="SELECT id FROM admin_user WHERE `email` = '$email' LIMIT 1";
         $query = $this->db->query($q) or die(var_dump($query));
@@ -357,8 +356,7 @@ public function AdminLoginFormAttribute($values=array())
           
           if($query->num_rows() > 0)
           {
-            $row = $query->result();
-                
+            $row = $query->result();    
             $row=$row[0];
             // If success everythig is good send header as "OK" and establishment_user details
             //$this->response($this->json($row), 200);

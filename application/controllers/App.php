@@ -100,7 +100,7 @@ public function login_facebook(){
 					 
 					 $this->data['email']=$values['email'];
 					 $this->data['password']=$values['password'];
-
+			  ppe($this->data['password']);
 				// redirect('establishment/home');
 			 //exit;
 			}

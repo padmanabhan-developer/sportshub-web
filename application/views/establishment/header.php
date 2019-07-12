@@ -11,6 +11,8 @@
             <span class="sr-only">Toggle navigation</span>
           </a>
       <div class="container">
-           <div class="logo"><a href="#"><img src="<?php echo base_url();?>images/logo.png"></a></div>
+           <!-- <div class="logo"><a href="#"><img src="<?php echo base_url();?>images/logo.png"></a></div> -->
+           <div class="logo"><a href="#"><img src="<?php echo base_url();?>/html/images/logo.png"></a></div>
+
         </div><!-- close container -->
     </header><!-- close header -->

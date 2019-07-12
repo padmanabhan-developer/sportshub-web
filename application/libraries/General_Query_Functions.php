@@ -10,6 +10,7 @@
     $port = 8888;
 
     $link = mysqli_init();
+   //  ppe($link);
     $success = mysqli_real_connect(
        $link,
        $host,
@@ -18,7 +19,8 @@
        $db,
        $port
     );
-   return mysqli_query($success, $query);
+   $success_new = mysqli_connect($host, $user, $password, $db, $port);
+   return mysqli_query($success_new, $query);
   }
   public function FetchSingleInformation($table_name,$selection,$where_string)
   {
@@ -36,7 +38,7 @@
    {
     $query .= " where ".$where_string;
    }
-   $res=$this->ExecuteQuery($query) or die("error in query $query<br>".mysql_error());
+   $res=$this->ExecuteQuery($query) or die("error in query $query<br>".mysqli_error());
    $fields=array();
    if($selection == "*")
    {
@@ -47,7 +49,7 @@
     $fields=explode("~",$real_selection);
    }
    $information=array();
-   while($row=mysql_fetch_object($res))
+   while($row=mysqli_fetch_object($res))
    {
     foreach($fields as $field)
     {
@@ -66,7 +68,7 @@
    $q="show columns from $table_name";
    $qr=$this->ExecuteQuery($q);
    $fields=array();
-   while($row=mysql_fetch_object($qr))
+   while($row=mysqli_fetch_object($qr))
    {
     $fields[]=$row->Field;
    }
@@ -88,7 +90,7 @@
    {
     $q .= " where $where_string";
    }
-   $qr=$this->ExecuteQuery($q) or die("error in query $q<br>".mysql_error());
+   $qr=$this->ExecuteQuery($q) or die("error in query $q<br>".mysqli_error());
    $fields=array();
    if($selection == "*")
    {
@@ -100,7 +102,7 @@
    }
    $information=array();
    $i=0;
-   while($row=mysql_fetch_object($qr))
+   while($row=mysqli_fetch_object($qr))
    {
     foreach($fields as $field)
     {
@@ -130,7 +132,7 @@
    $fields=substr($fields,0,-1);
    $values=substr($values,0,-2);
    $q="insert into $table_name ($fields) values($values)";
-   $this->ExecuteQuery($q)  or die("error in query $q<br>".mysql_error());
+   $this->ExecuteQuery($q)  or die("error in query $q<br>".mysqli_error());
   }
   public function UpdateTable($table_name,$field_values,$where_clause)
   {
@@ -181,8 +183,8 @@
   {
    $sql = "SELECT ".$id." FROM ".$table." WHERE `status`='1' ORDER BY position ASC LIMIT 1";	
    $result = $this->ExecuteQuery($sql);  
-   $row = mysql_fetch_object($result);
-   if(mysql_num_rows($result) > 0)
+   $row = mysqli_fetch_object($result);
+   if(mysqli_num_rows($result) > 0)
    {
     return $row->$id;
    }
@@ -194,7 +196,7 @@
   {
    $sql = "SELECT ".$field_name." FROM ".$table." WHERE $id='".$id_value."'";	
    $result = $this->ExecuteQuery($sql);  
-   $row = mysql_fetch_object($result);
+   $row = mysqli_fetch_object($result);
    return $row->$field_name;
   }
 

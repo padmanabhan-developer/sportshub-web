@@ -47,7 +47,7 @@
             <!--<a href="<?php echo base_url();?>establishment/login_facebook" class="facebook-button"><span class="facebook-icon"></span>Sign in with facebook</a>-->
        </div><!--close signup_box-->
        <!-- add section start-->
-         <div class="add"><script type="text/javascript" src="http://sportshub365.com/spotway/adb.php?tag=322570660558594a155&width=728&height=90"></script></div>
+         <div class="add"><script type="text/javascript" src="/spotway/adb.php?tag=322570660558594a155&width=728&height=90"></script></div>
        <!-- add section end-->
   </div><!--close wrapper-->
  

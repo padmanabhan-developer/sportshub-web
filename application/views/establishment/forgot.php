@@ -39,7 +39,7 @@
   <div class="modal-body">
    <!-- <p><h4><?php //echo $pwd ?></h4></p>
     <br />-->
-    <p>Your temporary password has been sent to your registered email id.</p>
+    <p>Your temporary password has been sent to your registered email id.11</p>
   </div>
   <footer> <a href="#" class="btn btn-small js-modal-close">Close</a> </footer>
 </div>

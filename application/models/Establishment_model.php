@@ -113,7 +113,7 @@ public function AdminLoginFormAttribute($values=array())
             if(!empty( $row->id )){ return $msg="success"; }
             else return $msg="Invalid credettial";
           }
-          else{return $msg="Password is wrong";}
+          else{return $msg=$password;}
         }
         else{return $msg="Email does not exist"; }
     }
@@ -282,7 +282,7 @@ public function AdminLoginFormAttribute($values=array())
 
   public function UpdateCardFormAttribute($values_card=array())
   {
-     if(count($values_card) == 0)
+     if(is_array($values_card) && count($values_card) == 0)
      {
       $values_card=array('first_name'=>'First Name:','last_name'=>'Last Name:','card_number'=>'Card Number:','exp_month'=>'Expiries Month:','exp_year'=>'Expiries Year:','code'=>'Code:');
      }
@@ -307,7 +307,7 @@ public function AdminLoginFormAttribute($values=array())
   }
   public function UpgradeCardFormAttribute($values_upgrade_card=array())
   {
-    if(count($values_upgrade_card) == 0)
+    if(is_array($values_upgrade_card) && count($values_upgrade_card) == 0)
     {
     $values_upgrade_card=array('first_name'=>'First Name:','last_name'=>'Last Name:','card_number'=>'Card Number:','exp_month'=>'Expiries Month:','exp_year'=>'Expiries Year:','code'=>'Code:');
     }
@@ -1486,9 +1486,15 @@ public function AdminLoginFormAttribute($values=array())
 	$data = curl_exec($ch);
 	curl_close($ch);
 	$res = array('latitude' => '', 'longitude' => ''); 
-	if ($data) {
-		//$location = json_decode($data);
-		$location = unserialize($data);
+	if ($data  &&  $data != ''  &&  $data != 'invalid key') {
+    // pp($url);
+    // var_dump($data);
+
+    // ppe($data);
+    //$location = json_decode($data);
+    if(is_array($data) || is_object($data)){
+      $location = unserialize($data);
+    }
 		//echo "<pre>";
 		//print_r($location); die;
 		$lat = isset($location['lat'])?$location['lat']:'';

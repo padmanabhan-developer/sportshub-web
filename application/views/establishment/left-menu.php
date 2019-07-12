@@ -13,11 +13,11 @@
                     </li>
                     <li class="treeview active">
                       <a href="<?php echo base_url();?>establishment/profile_settings">
-                        <img src="<?php echo base_url();?>/Sample/images/pro.jpg" style="margin-left: -15px;"> <span>Setup guide</span> 
+                      <i class="menu-icon1"></i> <span>Setup guide</span> 
                       </a>
                       <ul class="treeview-menu menu-open" style="margin-top: -25px">
-                        <li><a href="<?php echo base_url();?>establishment/profile_settings"></i> - Profile settings  <img src="<?php echo base_url();?>/images/plevel<?php echo $profilelevel; ?>.png" /></a></li>
-                        <li><a href="<?php echo base_url();?>establishment/tv_provider_channel"></i>- Schedule <img src="<?php echo base_url();?>/images/clevel<?php echo $schedule_level; ?>.png" /></a></li>
+                        <li><a href="<?php echo base_url();?>establishment/profile_settings"></i> - Profile settings  <i class="menu-icon2"></i></a></li>
+                        <li><a href="<?php echo base_url();?>establishment/tv_provider_channel"></i>- Schedule <i class="menu-icon2"></i></a></li>
                       </ul>
                     </li>
                     <li class="treeview">

@@ -155,7 +155,7 @@ public function AdminLoginFormAttribute($values=array())
   }
   public function ResetUser($email,$randpwd, $encypwd)
   {
-
+    ppe($randpwd);
     if(!empty($email))
     {
 

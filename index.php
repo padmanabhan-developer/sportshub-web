@@ -53,6 +53,9 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
+// echo '<pre>';
+// print_r($_SERVER);
+// exit;
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*
@@ -73,6 +76,7 @@ switch (ENVIRONMENT)
 	case 'testing':
 	case 'production':
 		ini_set('display_errors', 0);
+		echo PHP_VERSION;
 		if (version_compare(PHP_VERSION, '5.3', '>='))
 		{
 			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
@@ -289,4 +293,16 @@ switch (ENVIRONMENT)
  *
  * And away we go...
  */
+// ppe(BASEPATH);
 require_once BASEPATH.'core/CodeIgniter.php';
+
+function pp($s){
+	echo '<pre>';
+	print_r($s);
+	echo '</pre>';
+}
+
+function ppe($s){
+	pp($s);
+	exit;
+}
