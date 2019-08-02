@@ -208,7 +208,7 @@
         });
 		 }
 		 else {
-			$( "div.error" ).show().html('Please select a default profile image');
+			$( "div.error" ).show().html('Please select a default profile image2');
 			}
 		})
 	$("a.close2").click(function(){

@@ -47,7 +47,8 @@
 
 .tooltip-inner {
     max-width: 400px;
-    background-color: #d5b421;
+    /* background-color: #d5b421; */
+    background-color: #494e66;
     box-shadow: 0px 0px 0px 0px #182847 !important;
     text-align: left;
     font-family: 'FjallaOneRegular';
@@ -57,7 +58,7 @@
 
 h2{font-family: 'FjallaOneRegular';}
 body{background:#f0f1f5;}
-#header{background:#fff; height:172px; position:relative; z-index:9999;}
+#header{background:#fff; height:auto; position:relative; z-index:9999;}
 #adminend #header{background:#fff; height:82px; position:relative; z-index:9999;}
 .logo{width:100%; float:left; text-align:center; margin:9px 0 0 0 ;}
 p,h1,h2,h3,h4,h5,h6{margin:0; padding:0; font-weight:normal;}
@@ -687,7 +688,7 @@ border-radius: 10px; border:none; cursor:pointer;}
 .sidebar-toggle{position:absolute; z-index:999;}
 .sidebar-toggle:before{display:none;}
 .sidebar-toggle{background:url(images/nav.png) no-repeat center center !important; left:28px !important; top:28px !important;}
-.appwrapper .sidebar-toggle, .barwrapper .sidebar-toggle{background:url(images/nav.png) no-repeat center center !important; left:28px !important; top:118px !important;}
+.appwrapper .sidebar-toggle, .barwrapper .sidebar-toggle{background:url(images/nav.png) no-repeat center center !important; left:28px !important;}
 .main-sidebar {background: #182847;}
 .wrapper{background:url(images/blue.png) repeat-y left top; background-size:330px 100%;} 
 .sidebar-collapse .wrapper{background:none;}
@@ -1278,13 +1279,16 @@ border-radius: 4px; height:33px; margin: -6px 0 0 10px;}
     margin-left:28px;
     width:300px;
     line-height:16px;
-    background: #d5b421;
+    background: #494e66;
+    /* background: #d5b421; */
 }
 
 .tooltip-inner {
     max-width: 400px;
     text-align: left;    box-shadow: 0px 0px 5px 0px #182847;
-    background-color: #d5b421;    font-family: 'FjallaOneRegular';
+    /* background-color: #d5b421; */
+    background-color: #494e66;
+    font-family: 'FjallaOneRegular';
 	line-height: 20px;
 }
 
@@ -1336,7 +1340,8 @@ border-radius: 4px; height:33px; margin: -6px 0 0 10px;}
 
 .tooltip-arrow:after {
 	border-color: rgba(136, 183, 213, 0);
-	border-right-color: #d5b421;
+	/* border-right-color: #d5b421; */
+	border-right-color: #494e66;
 	border-width: 18px;
 	margin-top: 19px;
 }
@@ -1356,7 +1361,8 @@ margin-top: 18px;
 
 .tvprovider .tooltip-arrow:after {
 	border-color: rgba(136, 183, 213, 0);
-	border-right-color: #d5b421;
+	/* border-right-color: #d5b421; */
+	border-right-color: #494e66;
 	border-width: 18px;
 	margin-top: 48px !important;
 }
@@ -1376,7 +1382,7 @@ margin-top: 47px !important;
 
 .wizard {
     margin: 20px auto;
-    background: #d5b522;
+    /*background: #d5b522*/background: #494e66;
     color: white;
         font-family: 'FjallaOneRegular';
 }

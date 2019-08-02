@@ -33,7 +33,8 @@ $config['index_page'] = '';
  * Google API Key
  */
 //$config["GOOGLE_API_KEY"] = "AIzaSyDMDN0FuIIVMgHJFyB66hMRp_Kc__LF2v8"; // Place your Google API Key
-$config["GOOGLE_API_KEY"] = "AIzaSyCMbf00R3AHbKuWKWq2ucozsMaQyXuSpl0"; // Place your Google API Key
+// $config["GOOGLE_API_KEY"] = "AIzaSyCMbf00R3AHbKuWKWq2ucozsMaQyXuSpl0"; // Place your Google API Key
+$config["GOOGLE_API_KEY"] = "AIzaSyBm_cT92nEhHOSUrajvfD4Pb_zP_HXZyUg"; // Place your Google API Key
 
 /*
 |--------------------------------------------------------------------------

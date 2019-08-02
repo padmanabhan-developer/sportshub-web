@@ -1310,7 +1310,7 @@ border-radius: 4px; height:33px; margin: -6px 0 0 10px;}
 
 .wizard {
     margin: 20px auto;
-    background: #d5b522;
+    /*background: #d5b522*/background: #494e66;
     color: white;
         font-family: 'FjallaOneRegular';
 }

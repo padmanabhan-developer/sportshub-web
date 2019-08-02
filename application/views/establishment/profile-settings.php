@@ -51,7 +51,8 @@ z-index:9999 !important;
 }
 #tool-address .tooltip-arrow:after {
 	border-color: rgba(136, 183, 213, 0) !important;
-	border-left-color:  #d5b421 !important;
+	/* border-left-color:  #d5b421 !important; */
+	border-left-color:  #494e66 !important;
 	border-width: 18px !important;
 	margin-top: 19px !important;
 }
@@ -74,7 +75,8 @@ z-index:9999 !important;
 }
 #tool-addresstop .tooltip-arrow:after {
 	border-color: rgba(136, 183, 213, 0) !important;
-	border-bottom-color:  #d5b421 !important;
+	/* border-bottom-color:  #d5b421 !important; */
+	border-bottom-color:  #494e66 !important;
 	border-width: 18px !important;
 	margin-top: 19px !important;
 }

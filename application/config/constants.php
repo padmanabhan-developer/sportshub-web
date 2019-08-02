@@ -39,8 +39,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /*
  * Google API Key
  */
-//define("GOOGLE_API_KEY" , "AIzaSyCMbf00R3AHbKuWKWq2ucozsMaQyXuSpl0"); // Place your Google API Key
-define("GOOGLE_API_KEY" , "AIzaSyAdce-GHrB-QBC1gTimafj-PX-nZbNE--0"); // Place your Google API Key
+define("GOOGLE_API_KEY" , "AIzaSyBm_cT92nEhHOSUrajvfD4Pb_zP_HXZyUg"); // Place your Google API Key
+// define("GOOGLE_API_KEY" , "AIzaSyCMbf00R3AHbKuWKWq2ucozsMaQyXuSpl0"); // Place your Google API Key
+// define("GOOGLE_API_KEY" , "AIzaSyAdce-GHrB-QBC1gTimafj-PX-nZbNE--0"); // Place your Google API Key
 
 
 /* End of file constants.php */

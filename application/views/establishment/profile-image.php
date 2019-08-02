@@ -77,7 +77,10 @@
 			  if((is_array($profileGallery) > 0)){
 			  foreach($profileGallery as $key => $profi){
 				  if($profi['default_image']==1)$default=$profi['id'];
-			  }}
+        }}
+        if(!is_array($profileGallery)){
+          $profileGallery = array();
+        }
 			  ?>
          	  <div class="image_gallery">
               <form name="save-gallery" id="save-gallery" method="post" action="<?php echo base_url();?>establishment/profile_image">
@@ -87,7 +90,7 @@
               	   <h2 class="title5">image gallery<a href="javascript:void(0);" class="add-new-event" id="save-profile-gallery">SAVE & return</a>
                    <div class="image_info" style="text-align:left; ">You can upload upto 5 images. We recommend 1600 x 775 px to get the best output. You can crop the image when you upload it.</div>
                    
-                   <div class="error" style="text-align:center; display:none;">Please select a default profile image</div>
+                   <div class="error" style="text-align:center; display:none;">Please select a default profile image1</div>
                    </h2>
                    </form>
               	   <div class="gallery_row">

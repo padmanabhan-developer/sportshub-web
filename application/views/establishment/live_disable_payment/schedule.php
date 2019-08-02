@@ -144,7 +144,7 @@ top: 71px !important;
 
 .wizard {
     margin: 0px auto;
-    background: #d5b522;
+    /*background: #d5b522*/background: #494e66;
     color: white;
         font-family: 'FjallaOneRegular';
 }
