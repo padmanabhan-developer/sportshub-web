@@ -1055,7 +1055,7 @@ display:none !important;
                                     <?php //
                                       if($facility['type']=='check'){ ?>
                                       <?php if($i == 1) { if($step_5 == 1) { ?>
-                                  <span class="checkbox-box3" id="step_5_tooltips" data-toggle="tooltip" data-placement="right" data-original-title="<span style='cursor: pointer;' class='hidetooltip5 pull-right'>x</span><b>STEP 5 </b> <br> <span style='text-transform: uppercase;'> Choose the different facilities you have available in your bar.</span>">
+                                  <span class="checkbox-box3" id="step_5_tooltips" data-toggle="tooltip" data-placement="right" data-original-title="<span style='cursor: pointer;' class='hidetooltip5 pull-right'>x</span><b>STEP 5 </b> <br> <span style='text-transform: uppercase;'> Choose the different facilities you have available in your bar.</span>"></span>
 
                                   <?php } else {
 
@@ -1087,7 +1087,7 @@ display:none !important;
                                     <?php } 
                                       if($facility['type']=='text'){?>
                                       <?php if($i == 1) { ?>
-                                   <span class="checkbox-box3" id="step_5_tooltips" data-toggle="tooltip" data-placement="right" title="<span style='cursor: pointer;' class='hidetooltip5 pull-right'>x</span><b>STEP 5 </b> <br> <span style='text-transform: uppercase;'> Choose the different facilities you have available in your bar.</span>">
+                                   <span class="checkbox-box3" id="step_5_tooltips" data-toggle="tooltip" data-placement="right" title="<span style='cursor: pointer;' class='hidetooltip5 pull-right'>x</span><b>STEP 5 </b> <br> <span style='text-transform: uppercase;'> Choose the different facilities you have available in your bar.</span>"></span>
 
                                     <?php } else { ?>
                                                 <span class="checkbox-box3">
