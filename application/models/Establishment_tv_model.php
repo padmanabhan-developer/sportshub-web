@@ -105,21 +105,22 @@
        competition c on c.rel_sport_id=s.sport_id inner join fixture f on f.rel_competition_id=c.competition_id 
        where f.gmt_date_time > CURDATE() group by s.sport_id";
       $query=$this->db->query($sql);
-      
-      $row=$query->result();
-      if($query->num_rows()>0)
-       {
-         $i=0;
-         foreach($query->result() as $row)
-         {
-          $sp[$i]['id']=$row->sport_id;
-          $sp[$i]['sport_name']=$row->sport_name;
-          $i++;
-         }
+      $sp = array();
+      $total_record = 0;
+      if($query){
+        $row=$query->result();
+        if($query->num_rows()>0)
+        {
+          $i=0;
+          foreach($query->result() as $row)
+          {
+            $sp[$i]['id']=$row->sport_id;
+            $sp[$i]['sport_name']=$row->sport_name;
+            $i++;
+          }
 
-       }
-
-     
+        }
+	    }
       
     return $sp;
 
@@ -213,7 +214,9 @@
      $cond  $where ORDER BY f.gmt_date_time $limit";
 	//echo $sql; die;	
       $query=$this->db->query($sql);
-      
+      $sp = array();
+      $total_record = 0;
+      if($query){
       $row=$query->result();
       if($query->num_rows()>0)
        {
@@ -255,7 +258,7 @@
 		  	
           $i++;
          }
-       }
+       }}
     return $sp;
   }
   
@@ -295,11 +298,15 @@
 	//echo $sql; die;	
       $query=$this->db->query($sql);
       $total_record = 0;
+      $sp = array();
+      $total_record = 0;
+      if($query){
       $row=$query->result();
       if($query->num_rows()>0)
        {
 		   $total_record = $query->num_rows();
        }
+      }
     return $total_record;
   }
   

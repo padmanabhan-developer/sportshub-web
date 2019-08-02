@@ -11,6 +11,7 @@
                         <i class="menu-icon1"></i> <span>Home</span> 
                       </a>
                     </li>
+                    <?php  /* ?>
                     <li class="treeview active">
                       <a href="<?php echo base_url();?>establishment/profile_settings">
                       <i class="menu-icon1"></i> <span>Setup guide</span> 
@@ -20,11 +21,14 @@
                         <li><a href="<?php echo base_url();?>establishment/tv_provider_channel"></i>- Schedule <i class="menu-icon2"></i></a></li>
                       </ul>
                     </li>
+
+                    <?php  */ ?>
                     <li class="treeview">
                       <a href="<?php echo base_url();?>establishment/profile_settings">
                         <i class="menu-icon2"></i><span>Profile settings</span> 
                       </a>
                     </li>
+                    
                     <li class="treeview">
                       <a href="<?php echo base_url();?>establishment/schedule">
                         <i class="menu-icon3"></i> <span>Schedule</span> 

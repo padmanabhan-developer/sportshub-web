@@ -354,6 +354,9 @@ public function AdminLoginFormAttribute($values=array())
   
   public function AddEventFormAttribute($values=array())
   {
+    if(!is_array($values) && !is_object($values)){
+      $values = array();
+    }
     if(count($values) == 0)
     {
     $values=array('title'=>'','event_date'=>'','event_time'=>'','duration'=>'');
@@ -772,17 +775,21 @@ public function AdminLoginFormAttribute($values=array())
     //$rs= $this->db_query->FetchInformation(SPORT,"","1='1'");
     $sql="select ch.channel_id,ch.channel_name from channel ch inner join fixture_channel_list fcl on fcl.rel_channel_id=ch.channel_id inner join fixture f on f.fixture_id = fcl.rel_fixture_id where f.gmt_date_time >= NOW()  group by fcl.rel_channel_id order by ch.channel_name ";
     $query=$this->db->query($sql);
-    $row=$query->result();
-    if($query->num_rows()>0)
-    {
-     $i=0;
-     foreach($query->result() as $row)
-     {
-      $sp[$i]['id']=$row->channel_id;
-      $sp[$i]['channel_name']=$row->channel_name;
-      $i++;
-     }
+    $sp = array();
+    // ppe($query);
+    if($query){
+      $row=$query->result();
+      if($query->num_rows()>0)
+      {
+        $i=0;
+        foreach($query->result() as $row)
+        {
+          $sp[$i]['id']=$row->channel_id;
+          $sp[$i]['channel_name']=$row->channel_name;
+          $i++;
+        }
 
+      }
     }
   return $sp;
   }
@@ -791,7 +798,10 @@ public function AdminLoginFormAttribute($values=array())
 	$sp = array();  
 	$sql = "SELECT epc.est_ref, epc.channel_id, c.channel_name as channel_name_o, pc.channel_name, pc.channel_name_dp, pc.channelid  FROM `establishment_provider_channel` as epc left join `channel` as c on epc.channel_id=c.channel_id left join `provider_channels` as pc ON epc.channel_id = pc.channel_id where epc.est_ref = '".$estref."' and epc.status='1' order by pc.channel_name_dp asc, c.channel_name asc";	
 	//echo $sql; die;
-	$query = $this->db->query($sql);
+  $query = $this->db->query($sql);
+  $sp = array();
+    // ppe($query);
+    if($query){
 	$row = $query->result();
 	
 	if($query->num_rows()>0) {	
@@ -831,7 +841,7 @@ public function AdminLoginFormAttribute($values=array())
 		//echo "<pre>";
 		//print_r($sp); die;
 	}
-	
+  }
 	$sp = array_map('unserialize', array_unique(array_map('serialize', $sp)));
 		
 	return $this->msort($sp, array('channel_name_dp'));
@@ -978,6 +988,9 @@ public function AdminLoginFormAttribute($values=array())
     competition c on c.rel_sport_id=s.sport_id inner join fixture f on f.rel_competition_id=c.competition_id 
     where f.gmt_date_time > CURDATE() group by s.sport_id";
     $query=$this->db->query($sql);
+    $sp = array();
+    // ppe($query);
+    if($query){
     $row=$query->result();
     if($query->num_rows()>0)
     {
@@ -989,6 +1002,7 @@ public function AdminLoginFormAttribute($values=array())
       $i++;
      }
     }
+  }
     return $sp;
   }
 
@@ -1117,6 +1131,10 @@ public function AdminLoginFormAttribute($values=array())
     $cond $channel_condition $where ORDER BY f.gmt_date_time $limit";
 	//echo $sql; die;
     $query=$this->db->query($sql);
+    $total_record = 0;
+    $sp = array();
+    // ppe($query);
+    if($query){
     $row=$query->result();
     if($query->num_rows()>0)
     {
@@ -1152,6 +1170,7 @@ public function AdminLoginFormAttribute($values=array())
       $i++;
       }
     }
+  }
     return $sp;
 
   }
@@ -1271,13 +1290,16 @@ public function AdminLoginFormAttribute($values=array())
 	
 	//echo '<span style="display:none;">'.$sql1.'</span>';
     $query=$this->db->query($sql1);
-    $row=$query->result();
     $total_record = 0;
-	if($query->num_rows()>0)
-    {
-		$total_record= $query->num_rows();
+    // ppe($query);
+    if($query){
+      $row=$query->result();
+      $total_record = 0;
+      if($query->num_rows()>0)
+      {
+        $total_record= $query->num_rows();
+      }
     }
-
     return $total_record;
 
   }
@@ -1867,13 +1889,17 @@ public function AdminLoginFormAttribute($values=array())
 	  { 
 	 	 $sql = "select id from establishment_schedule as es JOIN fixture as f ON es.fixture_ref=f.fixture_id where f.gmt_date_time >= NOW() and es.establishment_ref='$est_ref_id' ";
 		 //$sql="select id from establishment_schedule where establishment_ref='$est_ref_id'";
-		 $query=$this->db->query($sql);
+     $query=$this->db->query($sql);
+     $total_record = 0;
+    // ppe($query);
+    if($query){
 		 $row=$query->result();
 		 $total_record = 0;
 		 if($query->num_rows()>0)
 		 {
 			$total_record= $query->num_rows();
-		 }
+     }
+    }
 	
 		 return $total_record;	
 	 }
