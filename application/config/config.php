@@ -16,7 +16,8 @@
 */
 // $config['base_url']	= 'http://aqacreative.com/sh365/';
 // $config['base_url']	= 'http://159.69.34.57/';
-$config['base_url']	= 'http://shub.local/';
+// $config['base_url']	= 'http://shub.local/';
+$config['base_url']	= 'http://sportshub365.com/';
 
 /*
 |--------------------------------------------------------------------------
